@@ -1,7 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-const App = () =>
-    <h1>Hey from App</h1>
+import Join from './components/Join'
+import Chat from './components/Chat'
 
+const App = () => (
+    <Router>
+        <Route path="/" exact component={Join}></Route>
+        <Route path="/chat" exact component={Chat}></Route>
+    </Router>
+);
 export default App;
